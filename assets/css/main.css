@@ -28,7 +28,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd;
+  --accent-color: #14dd97;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -1386,4 +1386,40 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.social-links a svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.about .content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 12px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #14dd97;
+}
+
+.about .content a {
+  color: #14dd97;
+  text-decoration: none;
+}
+
+.about .content a:hover {
+  text-decoration: underline;
 }

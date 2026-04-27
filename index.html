@@ -50,120 +50,55 @@
   </head>
 
   <body class="index-page">
-    <header id="header" class="header dark-background d-flex flex-column">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-
-      <div class="profile-img">
-        <img
-          src="assets/img/Profile_Image.jpg"
-          alt="Dwaipayan Dubey"
-          class="img-fluid rounded-circle"
-        />
-      </div>
-
-      <a
-        href="index.html"
-        class="logo d-flex align-items-center justify-content-center"
+    <header
+      id="header"
+      class="header top-navbar navbar navbar-dark navbar-expand-lg fixed-top"
+    >
+      <div
+        class="container d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-lg-between gap-1 top-navbar__inner"
       >
-        <h1 class="sitename">
-          Dwaipayan<span style="color: #14dd97">Dubey</span>
-        </h1>
-      </a>
-
-      <div class="social-links text-center">
         <a
-          href="https://de.linkedin.com/in/dwaipayan-dubey-782428174"
-          class="linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          class="navbar-brand top-navbar-brand flex-shrink-0 mb-0 me-2 me-lg-3"
+          href="#hero"
+          >Dwaipayan<span class="name-accent">Dubey</span></a
         >
-          <i class="bi bi-linkedin"></i>
-        </a>
-
-        <a
-          href="https://orcid.org/0000-0002-7033-209X"
-          class="orcid"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="ORCID"
+        <button
+          class="navbar-toggler d-lg-none flex-shrink-0 ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavCollapse"
+          aria-controls="topNavCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            width="18"
-            height="18"
-            fill="currentColor"
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end flex-lg-grow-0"
+          id="topNavCollapse"
+        >
+          <ul
+            id="navmenu"
+            class="navbar-nav navmenu justify-content-end text-end"
           >
-            <path
-              d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm-53.12 52.88a13.44 13.44 0 1 1-13.44 13.44 13.44 13.44 0 0 1 13.44-13.44zM63.44 94.08h22.88v98.48H63.44zm48.16 0h61.76c29.2 0 45.76 19.44 45.76 49.12 0 31.52-19.92 49.36-46.72 49.36H111.6zm22.88 20.32v58.08h34.72c17.68 0 26.56-12.48 26.56-29.12 0-17.68-9.44-28.96-26.88-28.96z"
-            />
-          </svg>
-        </a>
-        
-        <a
-          href="https://github.com/dubeydwaipayan"
-          class="github"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <i class="bi bi-github"></i>
-        </a>
-
-        <a
-          href="https://scholar.google.com/citations?user=wnNGXIgAAAAJ&hl=en"
-          class="scholar"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Google Scholar"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            width="18"
-            height="18"
-            fill="currentColor"
-          >
-            <path
-              d="M256 32 0 144l256 112 209.92-91.84V336H512V144L256 32zm-90.24 254.08L64 329.92C64 403.2 149.76 464 256 464s192-60.8 192-134.08l-101.76-43.84L256 326.4z"
-            />
-          </svg>
-        </a>
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#research">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
-            >
-          </li>
-          <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
-            >
-          </li>
-          <li>
-            <a href="#testimonials-reference"
-              ><i class="bi bi-clipboard navicon"></i> Teachings and Seminars</a
-            >
-          </li>
-          <li>
-            <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i> Conferences</a
-            >
-          </li>
-          <li>
-            <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i> Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main">
@@ -177,23 +112,39 @@
           style="opacity: 0.4"
         />
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="container hero-landing text-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="hero-avatar">
+            <img
+              src="assets/img/Profile_Image.jpg"
+              alt="Dwaipayan Dubey"
+              class="img-fluid rounded-circle"
+              width="220"
+              height="220"
+            />
+          </div>
           <h2>Hi, I'm Dwaipayan Dubey</h2>
-          <p>
-            Graduate Student at LMU Munich, Germany<br />
-            I'm
+          <p class="hero-subtitle">Graduate Student at Ludwig-Maximilians-Universität München, Germany</p>
+          <p class="hero-roleline">
+            I work on
             <span
               class="typed"
-              data-typed-items="an Astrophysicist, an Exoplanet Scientist, an Astrochemist"
-              >an Astrophysicist</span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
+              data-typed-items="Astrophysics, Exoplanet Atmospheres, Astrochemistry"
             ></span>
+          </p>
+          <p class="hero-cv">
+            <a
+              class="btn hero-cv__link"
+              href="resume/My_CV/Dwaipayan_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-file-pdf" aria-hidden="true"></i>
+              View CV
+            </a>
           </p>
         </div>
       </section>
@@ -202,441 +153,349 @@
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container section-title" data-aos="fade-up">
-          <br />
-          <h2>About</h2>
+          <h2>About me</h2>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
-              <img
-                src="assets/img/Profile_Image.jpg"
-                class="img-fluid rounded"
-                alt="Dwaipayan Dubey"
-              />
-            </div>
-
-            <div class="col-lg-8 content">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 content">
 
               <p class="py-2">
-                My research explores the chemistry and physics of exoplanet
-                atmospheres, with the broader goal of understanding how planetary
-                atmospheres can inform us about planet formation and evolution.
-                I am especially interested in the interpretation of elemental
-                abundance ratios, atmospheric disequilibrium processes, and the
-                extent to which observed spectra preserve reliable information
-                about a planet’s origin and history.
+                I work at the <strong>intersection of physics, chemistry, and statistics</strong>
+                to <strong>interpret exoplanet observations through theoretical simulations</strong>.
+                My research focuses on understanding how <strong>atmospheric
+                spectra</strong> can reveal the
+                <strong>physical and chemical nature of planets</strong>, and how
+                those atmospheric signatures connect to broader questions of
+                <strong>planet formation and evolution</strong>.
               </p>
 
               <p class="py-2">
-                As an astrophysicist working at the interface of exoplanet
-                science, astrochemistry, and spectroscopy, I study these
-                questions using theoretical and computational tools, including
-                radiative transfer, thermochemical and disequilibrium chemistry,
-                and Bayesian retrieval techniques. My work aims not only to
-                model atmospheric processes, but also to understand how those
-                processes manifest in real observations, and which inferred
-                trends are physically robust versus method-dependent.
+                My work has primarily focused on
+                <strong>gas giants and sub-Neptunes</strong>, studied using both
+                <strong>high-resolution and low-resolution spectroscopy</strong>.
+                By combining <strong>radiative transfer, atmospheric chemistry,
+                and Bayesian retrieval techniques</strong>, I investigate how
+                observed spectra can be translated into
+                <strong>robust constraints on atmospheric composition and
+                structure</strong>. The main focus of my research has been to understand the
+                <strong>elemental inventory of planetary atmospheres</strong> and
+                how those elements may be preserved, transformed, or altered
+                from the time of formation.
+                <strong>atmospheric abundances and elemental ratios</strong> can
+                serve as <strong>tracers of origin, migration, and long-term
+                chemical processing</strong>. In this way, I aim to
+                <strong>connect observations with theory</strong> to better
+                understand the diversity of planetary atmospheres and the
+                <strong>physical processes that shape them</strong>.
               </p>
 
               <p class="py-2">
-                My current research focuses on the atmospheric chemistry of gas
-                giants and sub-Neptunes, particularly in the context of JWST and
-                comparative exoplanet spectroscopy. I am interested in building
-                more physically informed retrieval frameworks that connect
-                observed spectra to atmospheric composition in a reliable way,
-                while reducing biases introduced by oversimplified assumptions.
+                During my undergraduate studies, I received several recognitions,
+                including the <strong>KVPY Fellowship</strong>, awarded by the
+                Ministry of Education and the
+               Department of Science and Technology (DST), Government
+                of India; the
+                <strong>Indian Academy of Sciences Summer Research
+                Fellowship</strong>; and an <strong>iGEM Gold Medal</strong> as
+                an advisor to the IISER Kolkata mathematical modeling team in
+                2021.
               </p>
 
-              <div class="row mt-4">
-                <div class="col-lg-12">
-                  <h3>Education</h3>
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>PhD in Astrophysics</strong> —
-                      Ludwig-Maximilians-Universität Munich (LMU Munich),
-                      Germany
-                      <br />
-                      <span
-                        >Final-year PhD candidate at the University Observatory
-                        Munich</span
-                      >
-                    </li>
+              <p class="py-2">
+                Outside academia, I enjoy landscape and street
+                photography, travelling to mountains, and playing football, cricket, and
+                badminton. I am a die-hard supporter of Argentina and FC Barcelona football team.
+              </p>
 
-                    <li class="mt-3">
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Research focus</strong> — Exoplanet atmospheres,
-                      astrochemistry, spectroscopy, and atmospheric retrievals
-                    </li>
-
-                    <li class="mt-3">
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email</strong> —
-                      <a href="mailto:ddubey@usm.lmu.de">ddubey@usm.lmu.de</a>
-                    </li>
-
-                    <li class="mt-3">
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Website</strong> —
-                      <a
-                        href="https://dwaipayandubey.github.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >dwaipayandubey.github.io</a
-                      >
-                    </li>
-                  </ul>
+              <div
+                class="about-education mt-5"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                <h3 class="about-education__title">Education</h3>
+                <div class="about-education__entries">
+                  <article
+                    class="edu-card edu-card--row"
+                    aria-label="Ludwig-Maximilians-Universität München"
+                  >
+                    <div class="edu-card__body">
+                      <h4 class="edu-card__degree">Ph.D. in Physics</h4>
+                      <p class="edu-card__dates">2022 – 2026</p>
+                      <p class="edu-card__dept">Department of Physics</p>
+                      <p class="edu-card__place">
+                        Ludwig-Maximilians-Universität München, Bavaria,
+                        Germany
+                      </p>
+                    </div>
+                    <div class="edu-card__side" title="LMU">
+                      <img
+                        class="edu-card__mark edu-card__mark--lmu"
+                        src="assets/img/Institute_Logo/lmu_siegel.gif"
+                        alt="Ludwig-Maximilians-Universität München university seal"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                    </div>
+                  </article>
+                  <article
+                    class="edu-card edu-card--row"
+                    aria-label="Indian Institute of Science Education and Research, Kolkata"
+                  >
+                    <div class="edu-card__body">
+                      <h4 class="edu-card__degree">
+                        BS–MS dual degree: Major in Physics, Minor in Chemistry
+                      </h4>
+                      <p class="edu-card__dates">2017 – 2022</p>
+                      <p class="edu-card__dept">
+                        Department of Physical Sciences
+                      </p>
+                      <p class="edu-card__place">
+                        Indian Institute of Science Education and Research
+                        (IISER) Kolkata, West Bengal, India
+                      </p>
+                    </div>
+                    <div class="edu-card__side" title="IISER Kolkata">
+                      <img
+                        class="edu-card__mark edu-card__mark--iiser"
+                        src="assets/img/Institute_Logo/IISER-K_Logo.svg"
+                        alt="Indian Institute of Science Education and Research, Kolkata logo"
+                        width="200"
+                        height="80"
+                        loading="lazy"
+                      />
+                    </div>
+                  </article>
                 </div>
               </div>
 
-              <p class="fst-italic py-3">
+              <!-- <p class="fst-italic py-3">
                 "The unknown thing to be known appeared to me as some stretch of
                 earth or hard marl, resisting penetration… the sea advances
                 insensibly in silence, nothing seems to happen, nothing moves,
                 the water is so far off you hardly hear it.. yet it finally
                 surrounds the resistant substance."
                 — Alexander Grothendieck
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
       </section>
       <!-- /About Section -->
 
-      <!-- Skills Section -->
-      <section id="skills" class="skills section light-background">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row skills-content skills-animation">
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>Latex</span> <i class="val">100%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>Python</span> <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Matlab</span> <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Skills Section -->
-
-      <!-- Resume Section -->
-      <section id="resume" class="resume section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>
-            <a href="#about">Resume <i class="bi bi-download navicon"></i></a>
-          </h2>
-        </div>
-      </section>
-      <!-- /Resume Section -->
-
-      <!-- Testimonials Section -->
+      <div id="research" class="research-aggregate">
+      <!-- Research -->
       <section
-        id="testimonials-reference"
-        class="testimonials-reference section light-background"
+        class="research-intro section"
+        aria-labelledby="research-section-title"
       >
         <div class="container section-title" data-aos="fade-up">
-          <h2>Teachings and Seminars</h2>
+          <h2 id="research-section-title">Research</h2>
         </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 1
-                  }
-                }
-              }
-            </script>
-
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-reference-item">
-                  <h3>Student Seminar on<br />Algebraic Topology</h3>
-                  <h4>
-                    IISER Thiruvananthauram<br /><br /><a href="al-topo.pdf"
-                      >Algebraic Topology Note
-                      <i class="bi bi-download navicon"></i
-                    ></a>
-                  </h4>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-reference-item">
-                  <h3>Algebra Seminar on<br />Basic Algebraic Geometry</h3>
-                  <h4>
-                    Presidency University<br /><br /><a href="presi-seminar.pdf"
-                      >Handwritten Notes <i class="bi bi-download navicon"></i
-                    ></a>
-                  </h4>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-reference-item">
-                  <h3>
-                    Lecture Series on Introductory Algebraic Geometry and
-                    Commutative Algebra
-                  </h3>
-                  <h4>
-                    NIT Jamshedpur<br /><br /><a href="#"
-                      >Documentation Ongoing</a
-                    >
-                  </h4>
-                </div>
-              </div>
+        <div
+          class="container research-intro__body"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <p class="py-2">
+                My work sits at the interface of exoplanet science, astrochemistry,
+                and spectroscopy. I use radiative transfer, disequilibrium
+                chemistry, and Bayesian retrievals to connect models of planetary
+                atmospheres to observations, with a focus on what spectra can
+                really tell us about composition, abundance ratios, and
+                and spectroscopy. I use radiative transfer, disequilibrium
+                I am especially interested in the atmospheric chemistry of gas
+                giants and sub-Neptunes in the era of JWST, and in building
+                retrievals that are physically informed and less sensitive to
+                oversimplified assumptions and method-driven biases.
+              </p>
             </div>
-
-            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
-      <!-- /Testimonials Section -->
+      <!-- /Research intro -->
 
-      <!-- Services Section -->
-      <section id="services" class="services section">
+      <section
+        id="publications"
+        class="publications section light-background"
+        aria-labelledby="publications-title"
+      >
         <div class="container section-title" data-aos="fade-up">
-          <h2>Conferences</h2>
-          <p>
-            The Frontier Symposium in Mathematics (2023) and AFS-III (2023) at
-            IISER Thiruvananthapuram showcased diverse mathematical fields and
-            advanced learning platforms. The fourth BRICS Mathematics Conference
-            (2021) fostered collaboration among BRICS nations with plenary
-            talks and sessions. The Mini MTTS Camp (2018) at Ramakrishna Mission
-            Vivekananda College, Kolkata, covered foundational topics for
-            undergraduates. The Workshop on Isomorphisms at Presidency
-            University and the 2020 Workshop on Category Theory (online)
-            provided platforms for discussing advanced concepts. These events
-            emphasized fostering mathematical exploration, collaboration, and
-            education through expert insights and interactive learning
-            environments.
-          </p>
+          <h2 id="publications-title">Publications</h2>
         </div>
 
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a
-                    href="https://www.iisertvm.ac.in/conferences/read/conferences-frontier-symposium-in-mathematics-2023"
-                    target="_blank"
-                    class="stretched-link"
-                    >Frontier Symposium of Mathematics, IISER TVM | 2022 &
-                    2023</a
-                  >
-                </h4>
-                <p class="description">
-                  The Frontier Symposium in Mathematics, hosted at IISER
-                  Thiruvananthapuram from February 17-19, 2023 aims to expose
-                  students to diverse mathematical fields through leading
-                  experts' insights.
-                </p>
-              </div>
-            </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="50">
+          <h3 class="publications__subhead">First Author Publications</h3>
+          <ol class="publication-list" role="list">
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="0">
+              <h4 class="publication-card__title">
+                Quantified estimation of molecular detections across different
+                classes of Neptunian atmospheres using cross-correlation
+                spectroscopy: prospects for future extremely large telescopes
+                with high-resolution spectrographs
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>The Astrophysical Journal Supplement Series</em> 278(1), 19
+                (2025)
+              </p>
+              <p class="publication-card__authors">
+                <strong>Dubey, D.</strong>, Majumdar, L., Beichman, C., Blake, G. A., Vasisht,
+                G., &amp; Henning, T.
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.3847/1538-4365/adbf05"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="50">
+              <h4 class="publication-card__title">
+                Polycyclic aromatic hydrocarbons as an extraterrestrial
+                atmospheric technosignature
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>The Planetary Science Journal</em> 6(1), 4 (2025)
+              </p>
+              <p class="publication-card__authors">
+                <strong>Dubey, D.</strong>, Kopparapu, R., Ercolano, B., &amp; Molaverdikhani, K.
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.3847/PSJ/ad98eb"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="publication-card__title">
+                A comparative simulation study of hot and ultrahot Jupiter
+                atmospheres using different ground-based high-resolution
+                spectrographs with cross-correlation spectroscopy
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>The Astrophysical Journal</em> 972(2), 165 (2024)
+              </p>
+              <p class="publication-card__authors"><strong>Dubey, D.</strong>, &amp; Majumdar, L.</p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.3847/1538-4357/ad5a97"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="150">
+              <h4 class="publication-card__title">
+                Polycyclic aromatic hydrocarbons in exoplanet atmospheres — I.
+                Thermochemical equilibrium models
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>Astronomy &amp; Astrophysics</em> 678, A53 (2023)
+              </p>
+              <p class="publication-card__authors">
+                <strong>Dubey, D.</strong>, Grübel, F., Arenales-Lope, R., Molaverdikhani, K.,
+                Ercolano, B., Rab, C., &amp; Trapp, O.
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.1051/0004-6361/202346958"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+          </ol>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a
-                    href="https://conference.iisertvm.ac.in/bricsmathconf/#:~:text=The%20fourth%20conference%20in%20this,mathematics%20or%20statistics%20is%20welcome"
-                    target="_blank"
-                    class="stretched-link"
-                    >The 4th Brics Conference,<br />
-                    IISER TVM | Dec 7-10, 2021</a
-                  >
-                </h4>
-                <p class="description">
-                  The fourth BRICS Mathematics Conference, held at IISER
-                  Thiruvananthapuram (Dec 7-10, 2021), featured plenary talks,
-                  contributed sessions, and posters, fostering mathematical
-                  collaboration among BRICS nations.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a
-                    href="https://www.atmschools.org/school/2024/AFS-IIi/afs-iii-tvm"
-                    target="_blank"
-                    class="stretched-link"
-                    >Annual Foundation School III,<br />IISER TVM | June & July,
-                    2023</a
-                  >
-                </h4>
-                <p class="description">
-                  AFS-III (Annual Foundation School - III, 2023) was held at
-                  IISER Thiruvananthapuram from June 19 to July 15, convened by
-                  Dr. Viji Z. Thomas and Dr. Ramesh Kasilingam.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-binoculars"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="#" class="stretched-link"
-                    >Workshop on Isomorphisms, Presidency University</a
-                  >
-                </h4>
-                <p class="description">
-                  The Workshop on Isomorphisms was hosted at Presidency
-                  University, providing a platform to explore and discuss
-                  advanced topics related to mathematical isomorphisms.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-brightness-high"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a
-                    href="https://mtts.org.in/programme/kol2018"
-                    target="_blank"
-                    class="stretched-link"
-                    >Mini MTTS Camp Kolkata, <br />RKMVC College | Dec 2018</a
-                  >
-                </h4>
-                <p class="description">
-                  The Mini MTTS Programme, held at Ramakrishna Mission
-                  Vivekananda Centenary College, Kolkata (Dec 24-29, 2018),
-                  featured courses in Linear Algebra, Real Analysis, Number
-                  Theory, and Foundations for eligible undergraduates.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a
-                    href="https://sites.google.com/view/logic-webinar-iitk/short-coursesreading-groups/category-theory"
-                    target="_blank"
-                    class="stretched-link"
-                    >Workshop on Category Theory,<br />Online Lecture Series |
-                    2020</a
-                  >
-                </h4>
-                <p class="description">
-                  The 2020 Workshop on Category Theory, held as an online
-                  lecture series, explored foundational and advanced concepts,
-                  offering valuable insights to participants from diverse
-                  mathematical backgrounds.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h3
+            class="publications__subhead publications__subhead--secondary"
+            data-aos="fade-up"
+          >
+            Other Publications
+          </h3>
+          <ol class="publication-list" role="list" data-aos="fade-up">
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="0">
+              <h4 class="publication-card__title">
+                Polycyclic aromatic hydrocarbons in exoplanet atmospheres: a
+                detectability study
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>MNRAS</em> 536(2), 1555–1578 (2025)
+              </p>
+              <p class="publication-card__authors">
+                Arenales-Lope, R., Molaverdikhani, K., <strong>Dubey, D.</strong>, Ercolano, B.,
+                Grübel, F., &amp; Rab, C.
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.1093/mnras/stae2619"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="50">
+              <h4 class="publication-card__title">
+                Detectability of polycyclic aromatic hydrocarbons in the
+                atmosphere of WASP-6 b with JWST NIRSpec/PRISM
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>MNRAS</em> 536(1), 324–339 (2025)
+              </p>
+              <p class="publication-card__authors">
+                Grübel, F., Molaverdikhani, K., Ercolano, B., Rab, C., Trapp, O.,
+                <strong>Dubey, D.</strong>, &amp; Arenales-Lope, R.
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.1093/mnras/stae2532"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+            <li class="publication-card" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="publication-card__title">
+                Data availability and requirements relevant for the Ariel space
+                mission and other exoplanet atmosphere applications
+              </h4>
+              <p class="publication-card__venue">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <em>RAS Techniques and Instruments</em> 3(1), 636–690 (2024)
+                (K. L. Chubb et al., including <strong>Dubey, D.</strong>)
+              </p>
+              <a
+                class="publication-card__link"
+                href="https://doi.org/10.1093/rasti/rzae039"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                View in Journal</a
+              >
+            </li>
+          </ol>
         </div>
       </section>
-      <!-- /Services Section -->
+      <!-- /Publications -->
+      </div>
+      <!-- /#research aggregate -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
@@ -645,62 +504,182 @@
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
+          <div
+            class="row gy-4 align-items-start align-items-lg-stretch contact-split"
+          >
             <div class="col-lg-5">
-              <div class="info-wrap">
+              <div class="info-wrap contact-info-panel w-100">
                 <div
-                  class="info-item d-flex"
+                  class="info-item d-flex contact-info-item--email"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h3>Address</h3>
-                    <p>Munich<br />Germany</p>
+                  <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
+                  <div class="flex-grow-1 min-w-0">
+                    <h3>Email</h3>
+                    <ul class="contact-email-list" role="list">
+                      <li>
+                        <a
+                          class="contact-email-link"
+                          href="mailto:dwaipayan.dubey25@gmail.com"
+                          >dwaipayan.dubey25@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="contact-email-link"
+                          href="mailto:ddubey@usm.lmu.de"
+                          >ddubey@usm.lmu.de</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
                 <div
-                  class="info-item d-flex"
+                  class="info-item d-flex contact-info-item--address"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
-                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
                   <div>
-                    <h3>Call</h3>
-                    <a href="tel:7908920757" target="_blank"
-                      ><p>+91 79089 20757</p></a
-                    >
+                    <h3>Address</h3>
+                    <p class="contact-address">
+                      Universitäts-Sternwarte München<br />
+                      Scheinerstraße 1<br />
+                      81679 München
+                    </p>
                   </div>
                 </div>
 
                 <div
-                  class="info-item d-flex"
+                  class="contact-panel-socials"
                   data-aos="fade-up"
-                  data-aos-delay="400"
+                  data-aos-delay="350"
                 >
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h3>Email</h3>
-                    <a href="mailto:2014dwaiapayan@gmail.com" target="_blank"
-                      ><p>2014dwaiapayan@gmail.com</p></a
+                  <p class="contact-socials__eyebrow">Find me online</p>
+                  <div
+                    class="contact-socials"
+                    role="group"
+                    aria-label="Social and academic profiles"
+                  >
+                    <a
+                      href="https://orcid.org/0000-0002-7033-209X"
+                      class="contact-socials__cell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ORCID"
                     >
-                    <p>ddubey@usm.lmu.de</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm-53.12 52.88a13.44 13.44 0 1 1-13.44 13.44 13.44 13.44 0 0 1 13.44-13.44zM63.44 94.08h22.88v98.48H63.44zm48.16 0h61.76c29.2 0 45.76 19.44 45.76 49.12 0 31.52-19.92 49.36-46.72 49.36H111.6zm22.88 20.32v58.08h34.72c17.68 0 26.56-12.48 26.56-29.12 0-17.68-9.44-28.96-26.88-28.96z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.researchgate.net/profile/Dwaipayan-Dubey-2"
+                      class="contact-socials__cell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="ResearchGate"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://de.linkedin.com/in/dwaipayan-dubey-782428174"
+                      class="contact-socials__cell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                    >
+                      <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://scholar.google.com/citations?user=wnNGXIgAAAAJ&hl=en"
+                      class="contact-socials__cell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Google Scholar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M256 32 0 144l256 112 209.92-91.84V336H512V144L256 32zm-90.24 254.08L64 329.92C64 403.2 149.76 464 256 464s192-60.8 192-134.08l-101.76-43.84L256 326.4z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://github.com/dubeydwaipayan"
+                      class="contact-socials__cell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="col-lg-7">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d341.13725338738897!2d88.34203498137549!3d22.677299798919734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734103968426!5m2!1sen!2sin"
-                frameborder="0"
-                style="border: 0; width: 100%; height: 344px"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div> -->
+            <div class="col-lg-7">
+              <figure
+                class="contact-photo-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
+                <div class="contact-photo-frame">
+                  <img
+                    class="contact-photo"
+                    src="assets/img/Hallstatt/Hallstatt.jpg"
+                    alt="Hallstatt, Austria — photograph by Dwaipayan Dubey (2023)"
+                    width="1600"
+                    height="1067"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="contact-photo-caption">
+                  <span class="contact-photo-caption__label"
+                    >Captured by me at Hallstatt, Austria (2023)</span
+                  >
+                  <!-- <a
+                    class="contact-photo-caption__map"
+                    href="https://www.openstreetmap.org/?mlat=48.14915&amp;mlon=11.60400#map=17/48.14915/11.60400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Institute on map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a
+                  > -->
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -712,7 +691,7 @@
         <div class="copyright text-center">
           <p>
             © <span>Copyright</span>
-            <strong class="px-1 sitename">Dwaipayan Dubey 2026</strong><br />
+            <strong class="px-1 sitename">Dwaipayan Dubey (Last Updated in 2026) </strong><br />
             <span>All Rights Reserved</span>
           </p>
         </div>

@@ -16,21 +16,32 @@
 
   function headerToggle() {
     document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    if (headerToggleBtn) {
+      headerToggleBtn.classList.toggle('bi-list');
+      headerToggleBtn.classList.toggle('bi-x');
+    }
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener('click', headerToggle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  document.querySelectorAll('#navmenu a').forEach((navmenu) => {
     navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
+      if (document.querySelector('.header.header-show') && headerToggleBtn) {
         headerToggle();
       }
+      if (!window.matchMedia('(max-width: 991.98px)').matches) {
+        return;
+      }
+      const collapse = document.getElementById('topNavCollapse');
+      if (collapse && window.bootstrap && window.bootstrap.Collapse) {
+        const inst = window.bootstrap.Collapse.getOrCreateInstance(collapse);
+        inst.hide();
+      }
     });
-
   });
 
   /**
